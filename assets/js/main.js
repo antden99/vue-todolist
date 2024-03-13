@@ -45,17 +45,30 @@ createApp({
                 const newTodo = {
                     text: this.areaInput,
                     done: false,
-                };                
+                };
 
                 //faccio il console log del nuovo oggetto
                 console.log(newTodo)
                 //assegno il nuovo oggetto all'inizio della lista Todo utilizzando unshift
                 this.listTodo.unshift(newTodo);
                 // svuoto area input
-                this.areaInput=""
+                this.areaInput = ""
                 //controllo la nuova lista
                 console.log(this.listTodo)
             }
+        },
+        reverse(index) {
+            //controllo di agire sull'indice corretto
+            console.log(index);
+            //controllo di visualizzare il valore corretto
+            console.log(this.listTodo[index].done)
+            //sel il valore è uguale a true allora lo cambio e viceversa
+            if (this.listTodo[index].done === true) {
+                this.listTodo[index].done = false;
+            } else if (this.listTodo[index].done === false) {
+                this.listTodo[index].done = true;
+            }
+
         }
     },
 
