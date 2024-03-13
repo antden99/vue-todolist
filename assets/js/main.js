@@ -31,8 +31,11 @@ createApp({
 
     },
     methods:{
-        remove(){
-            console.log("rimosso");
+        remove(index){
+            //faccio il console log per vedere la stringa rimosso e su quale elemento sto cliccando la X tramite l'indice
+            console.log("rimosso",index);
+            //richiamo il metodo splice per rimuovere l'elemento dall'array listTodo
+            this.listTodo.splice(index,1)
         }
     }
 

@@ -17,8 +17,8 @@
         <input type="text" placeholder="Inserisci un elemento della lista">
         <ul>
             <!--se todo.done è uguale a true allora inserisco la classe line_througt-->
-            <li v-for="todo in listTodo" v-bind:class="{line_througt:todo.done===true}">{{todo.text}}
-                 <span @click="remove()"><i class="fa-solid fa-x"></i></span></li>
+            <li v-for="(todo,index) in listTodo" v-bind:class="{line_througt:todo.done===true}">{{todo.text}}
+                 <span @click="remove(index)"><i class="fa-solid fa-x"></i></span></li>
 
         </ul>
     </div>
