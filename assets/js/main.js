@@ -12,7 +12,7 @@ createApp({
                 },
                 {
                     text: "Cipolla",
-                    done: true,
+                    done: false,
                 },
                 {
                     text: "Banana",
@@ -20,7 +20,7 @@ createApp({
                 },
                 {
                     text: "Pera",
-                    done: true,
+                    done: false,
                 },
                 {
                     text: "Prezzemolo",

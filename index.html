@@ -15,7 +15,8 @@
         <h1>Ecco la tua ToDoList</h1>
         <input type="text" placeholder="Inserisci un elemento della lista">
         <ul>
-            <li v-for="todo in listTodo">{{todo.text}}</li>
+            <!--se todo.done è uguale a true allora inserisco la classe line_througt-->
+            <li v-for="todo in listTodo" v-bind:class="{line_througt:todo.done===true}">{{todo.text}}</li>
         </ul>
     </div>
 
@@ -24,3 +25,4 @@
 </body>
 
 </html>
+
