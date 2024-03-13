@@ -30,6 +30,11 @@ createApp({
         }
 
     },
+    methods:{
+        remove(){
+            console.log("rimosso");
+        }
+    }
 
 
 
