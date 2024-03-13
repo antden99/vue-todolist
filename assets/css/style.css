@@ -11,4 +11,14 @@ input{
     text-decoration:line-through;
 }
 
+ul{
+    display:flex ;
+    flex-direction: column;
+    gap: 10px;
+}
+.bg_red:hover{
+    color: red;
+    cursor: pointer;
+}
+
 

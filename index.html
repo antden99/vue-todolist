@@ -14,11 +14,13 @@
 
     <div id="app">
         <h1>Ecco la tua ToDoList</h1>
-        <input type="text" placeholder="Inserisci un elemento della lista">
+       <!--con keyup.enter dico che al click sul tasto invio si attiva il metodo addTodo()-->
+        <input type="text" placeholder="Inserisci un elemento della lista" v-model="areaInput" @keyup.enter="addTodo()">
+        <button @click="addTodo()">aggiungi</button>
         <ul>
             <!--se todo.done è uguale a true allora inserisco la classe line_througt-->
             <li v-for="(todo,index) in listTodo" v-bind:class="{line_througt:todo.done===true}">{{todo.text}}
-                 <span @click="remove(index)"><i class="fa-solid fa-x"></i></span></li>
+                 <span @click="remove(index)" class="bg_red"><i class="fa-solid fa-x"></i></span></li>
 
         </ul>
     </div>
