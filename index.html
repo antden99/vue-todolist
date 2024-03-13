@@ -11,6 +11,14 @@
 <body>
 
 
+    <div id="app">
+        <h1>Ecco la tua ToDoList</h1>
+        <input type="text" placeholder="Inserisci un elemento della lista">
+        <ul>
+            <li v-for="todo in listTodo">{{todo.text}}</li>
+        </ul>
+    </div>
+
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
